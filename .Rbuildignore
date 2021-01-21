@@ -1,0 +1,17 @@
+dev/
+Makefile
+makestuff/
+rpkgbuild/
+all.time
+commit.time
+content.mk
+make.log
+dictClean.*
+target.mk
+up.time
+.*\.Rout.*
+.*\.rtmp
+.*\.Rlog
+.*\.rda
+.*\.log
+notes.txt
