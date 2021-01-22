@@ -27,7 +27,7 @@ cleanDict <- function(keys, values){
 		| length(keys) != length(values)
 	) stop("Need two equal-length vectors for cleanDict")
 	r <- (tibble(x=keys, n=values))
-	o <- filter(r, !is.na(x) & !is.na(n))
+	o <- dplyr::filter(r, !is.na(x) & !is.na(n))
 	if (nrow(o) < nrow(r))
 		warning("Omitting NAs in cleanDict")
 	d <- distinct(o)
@@ -48,7 +48,7 @@ cleanDict <- function(keys, values){
 patchDict <- function(dat, dict=NULL, keys, values){
 	return(mergeDict(dat, dict, keys, values)
 		%>% mutate(n=ifelse(is.na(n), x, n))
-		%>% pull(n)
+		%>% pull("n")
 	)
 }
 
@@ -60,7 +60,7 @@ patchDict <- function(dat, dict=NULL, keys, values){
 #' @param values dictionary values
 catDict <- function(dat, dict=NULL, keys, values){
 	m <- (mergeDict(dat, keys, values))
-	not_found <- filter(m, 
+	not_found <- dplyr::filter(m, 
 		!is.na(x) & is.na(n)
 	)
 	if (nrow(not_found) > 0){
@@ -69,5 +69,5 @@ catDict <- function(dat, dict=NULL, keys, values){
 			, unique(not_found[["x"]])
 		)
 	}
-	return(pull(m, n))
+	return(pull(m, "n"))
 }
