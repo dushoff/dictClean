@@ -1,4 +1,5 @@
 ## This is dictClean
+## https://dushoff.github.io/dictClean/
 
 current: target
 -include target.mk
