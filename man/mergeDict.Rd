@@ -4,12 +4,12 @@
 \alias{mergeDict}
 \title{merge a data vector with a dictionary table}
 \usage{
-mergeDict(dat, dict = NULL, keys, values)
+mergeDict(dat, df = NULL, keys, values)
 }
 \arguments{
 \item{dat}{data vector}
 
-\item{dict}{dictionary table}
+\item{df}{dictionary table}
 
 \item{keys}{dictionary keys}
 

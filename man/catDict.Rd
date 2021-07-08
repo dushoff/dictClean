@@ -4,12 +4,12 @@
 \alias{catDict}
 \title{use mergeDict to apply a lookup table}
 \usage{
-catDict(dat, dict = NULL, keys, values)
+catDict(dat, df = NULL, keys, values)
 }
 \arguments{
 \item{dat}{data vector}
 
-\item{dict}{dictionary table}
+\item{df}{dictionary table}
 
 \item{keys}{dictionary keys}
 

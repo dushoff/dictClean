@@ -4,7 +4,7 @@
 \alias{cleanDict}
 \title{Make a dictionary tibble from a keys vector and a values vector}
 \usage{
-cleanDict(keys, values)
+cleanDict(df = NULL, keys, values)
 }
 \arguments{
 \item{keys}{dictionary keys}
