@@ -4,12 +4,12 @@
 \alias{patchDict}
 \title{use mergeDict to patch errors identified in a table}
 \usage{
-patchDict(dat, dict = NULL, keys, values)
+patchDict(dat, df = NULL, keys, values)
 }
 \arguments{
 \item{dat}{data vector}
 
-\item{dict}{dictionary table}
+\item{df}{dictionary table}
 
 \item{keys}{dictionary keys}
 
